@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASTROQORA DIGITAL | Isi Ulang Saldo</title>
+
+<style>
+* { box-sizing: border-box; }
+
+:root {
+    --pink-bg: #EC4383;
+    --pink-card: #FEDBE8;
+    --pink-bank: #F9C6D9;
+    --pink-border: #E7A9BF;
+    --dark-text: #263238;
+    --teal: #30B9B5;
+    --cyan: #00BFC5;
+    --yellow: #A45A00;
+}
+
+body {
+    margin: 0;
+    padding: 15px;
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--pink-bg);
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.header img {
+    display: block;
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.header h1 {
+    color: white;
+    font-size: clamp(21px, 5vw, 30px);
+    margin: 0;
+}
+
+.container {
+    max-width: 484px;
+    margin: auto;
+    padding: 24px 22px 28px;
+    background: var(--pink-card);
+    border: 1px solid var(--pink-border);
+    border-radius: 23px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+    color: var(--dark-text);
+}
+
+.subtitle {
+    text-align: center;
+    color: #008F98;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--dark-text);
+    margin: 0 0 12px;
+    font-size: 24px;
+}
+
+.description {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 27px;
+    color: #49333D;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 9px;
+    color: var(--dark-text);
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #D69BB2;
+    border-radius: 11px;
+    background: #FFF7FA;
+    color: #263238;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+input:focus { border-color: #D64D83; }
+
+.presets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 21px;
+}
+
+.presets button {
+    padding: 12px 5px;
+    border: 1px solid #D69BB2;
+    border-radius: 10px;
+    background: #F9C6D9;
+    color: #263238;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.presets button.active {
+    border-color: #008F98;
+    background: #FCEAF1;
+    color: #008F98;
+}
+
+.bank {
+    padding: 17px 16px;
+    background: var(--pink-bank);
+    border: 1px solid var(--pink-border);
+    border-radius: 14px;
+    margin-bottom: 20px;
+    color: var(--dark-text);
+}
+
+.bank-title {
+    font-size: 12px;
+    letter-spacing: .5px;
+    margin-bottom: 15px;
+    color: #49333D;
+}
+
+.bank-info {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 13px;
+    color: var(--dark-text);
+}
+
+.bank-info strong {
+    display: block;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.account-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.copy-btn {
+    background: transparent;
+    color: #007D85;
+    border: 1px solid #008F98;
+    padding: 10px 14px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #D69BB2;
+    border-bottom: 1px solid #D69BB2;
+    padding: 17px 0;
+    margin-bottom: 17px;
+    font-size: 13px;
+    color: var(--dark-text);
+}
+
+.total strong {
+    color: var(--yellow);
+    font-size: 21px;
+}
+
+.main-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 9px;
+    background: var(--teal);
+    color: #071D1E;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    margin-bottom: 13px;
+}
+
+.main-btn:hover { background: #42CFCA; }
+
+.footer {
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.6;
+    margin-top: 5px;
+    color: #49333D;
+}
+
+@media(max-width: 400px) {
+    .container { padding: 20px 15px; }
+    .presets button { font-size: 11px; }
+    .header { gap: 8px; }
+    .header img { width: 48px; height: 48px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+    <img src="logo-astroqora.png" alt="Logo ASTROQORA DIGITAL">
+    <h1>ASTROQORA DIGITAL</h1>
+</header>
+
+<main class="container">
+    <div class="subtitle">LAYANAN PEMBAYARAN</div>
+    <h2>Isi Ulang Saldo</h2>
+
+    <p class="description">
+        Masukkan nominal saldo yang ingin Anda isi,
+        lalu ikuti petunjuk transfer di bawah.
+    </p>
+
+    <label for="nominal">Nominal isi ulang (Rp)</label>
+    <input type="number" id="nominal" placeholder="Masukkan nominal"
+           min="1" value="250000" oninput="updateTotal()">
+
+    <div class="presets">
+        <button onclick="setNominal(40000,this)">Rp40.000</button>
+        <button class="active" onclick="setNominal(250000,this)">Rp250.000</button>
+        <button onclick="setNominal(500000,this)">Rp500.000</button>
+    </div>
+
+    <section class="bank">
+        <div class="bank-title">INFORMASI TRANSFER BANK</div>
+
+        <div class="bank-info">
+            Bank tujuan
+            <strong>MANDIRI</strong>
+        </div>
+
+        <div class="account-row">
+            <div class="bank-info">
+                Nomor rekening
+                <strong id="rekening">ISI NOMOR REKENING RESMI</strong>
+            </div>
+            <button class="copy-btn" onclick="copyRekening()">Salin</button>
+        </div>
+
+        <div class="bank-info">
+            Nama pemilik rekening
+            <strong>ISI NAMA PEMILIK REKENING</strong>
+        </div>
+    </section>
+
+    <div class="total">
+        <span>Total transfer</span>
+        <strong id="total">Rp 250.000</strong>
+    </div>
+
+    <button class="main-btn" onclick="copyNominal()">Salin Nominal Transfer</button>
+    <button class="main-btn" onclick="konfirmasi()">Saya Sudah Membayar</button>
+
+    <p class="footer">
+        Pastikan nama penerima dan nomor rekening benar
+        sebelum melakukan transfer. Simpan bukti pembayaran
+        Anda. Konfirmasi pembayaran harus diverifikasi
+        sebelum saldo ditambahkan.
+    </p>
+</main>
+
+<script>
+function formatRupiah(angka) {
+    return "Rp " + Number(angka || 0).toLocaleString("id-ID");
+}
+
+function updateTotal() {
+    const nominal = Number(document.getElementById("nominal").value) || 0;
+    document.getElementById("total").textContent = formatRupiah(nominal);
+
+    const url = new URL(window.location.href);
+    if (nominal > 0) {
+        url.searchParams.set("nominal", nominal);
+    } else {
+        url.searchParams.delete("nominal");
+    }
+    window.history.replaceState({}, "", url);
+}
+
+function setNominal(value, button) {
+    document.getElementById("nominal").value = value;
+    document.querySelectorAll(".presets button")
+        .forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+    updateTotal();
+}
+
+async function copyText(value, successMessage) {
+    try {
+        await navigator.clipboard.writeText(value);
+        alert(successMessage);
+    } catch (error) {
+        alert("Gagal menyalin. Silakan salin secara manual.");
+    }
+}
+
+function copyRekening() {
+    const rekening = document.getElementById("rekening").textContent.trim();
+    if (rekening.includes("ISI NOMOR")) {
+        alert("Nomor rekening belum diisi.");
+        return;
+    }
+    copyText(rekening, "Nomor rekening berhasil disalin!");
+}
+
+function copyNominal() {
+    const nominal = Number(document.getElementById("nominal").value);
+    if (!nominal || nominal <= 0) {
+        alert("Masukkan nominal terlebih dahulu.");
+        return;
+    }
+    copyText(String(nominal), "Nominal berhasil disalin!");
+}
+
+function konfirmasi() {
+    alert("Silakan hubungi admin untuk konfirmasi pembayaran.");
+}
+
+const params = new URLSearchParams(window.location.search);
+const nominalURL = params.get("nominal");
+
+if (nominalURL && Number(nominalURL) > 0) {
+    document.getElementById("nominal").value = Number(nominalURL);
+}
+updateTotal();
+</script>
+
+</body>
+</html>
